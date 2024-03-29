@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body{
+background-color: black;
+}
+    
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(189, 192, 35, 0.681);
+    color: white;
+}
+p{
+font-size: larger;
+font-weight: bolder;
+margin-right: 100px;
+color: white;
+}
+.content{
+    top: 30%;
+    left: 5%;
+    color: white;
+    z-index: 2;
+    transform: translate(1%);
+    position: absolute;
+    line-height: 70px;
+}
+small{
+    font-size: 70px;
+    position: relative;
+}
+small::after{
+    content:"|";
+    position: absolute;
+    right: 0;
+    color: white;
+    background-color: black;
+    width: 100%;
+    animation: typing 5s steps(100) alternate infinite;
+
+}
+
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+/* === removing default button style ===*/
+.button {
+    margin-top: 10%;
+    margin-left: 27px;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: rgba(214, 177, 13, 0.792);
+    color: black;
+    position: absolute;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #131312d8;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    margin-right: 20px;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  .bubble img{
+    width: 50px;
+    animation:bubble 7s linear infinite;
+  }
+  .bubble{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+  }
+  @keyframes bubble{
+    0%{transform :translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{transform :translateY(-80vh);
+        opacity: 0;
+    }
+  }
+  .bubble img:nth-child(1){
+     animation-delay: 2s;
+     width: 25px;
+  }
+  .bubble img:nth-child(2){
+    animation-delay: 1s;
+    width: 40px;
+ }
+ .bubble img:nth-child(3){
+    animation-delay: 2s;
+    width: 25px;
+ }
+ .bubble img:nth-child(4){
+    animation-delay: 3s;
+    width: 50px;
+ }
+ .bubble img:nth-child(5){
+    animation-delay: 4.5s;
+    width: 35px;
+ }
+ .bubble img:nth-child(6){
+    animation-delay: 6s;
+    width: 50px;
+ }
+ .bubble img:nth-child(7){
+    animation-delay: 7s;
+    width: 30px;
+ }

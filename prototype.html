@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            margin-top: 30px;
+            color: black;
+        }
+        P{
+            margin-top: 30px;
+            color: black;
+            text-align: left;
+            font-weight: bold;
+        }
+        img{
+            margin-top: 30px;
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            margin-left: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Prototypal Inheritance</h1>
+    <p>In JavaScript, prototypal inheritance is a key concept that allows objects to inherit properties and methods from other objects. Unlike classical inheritance found in some other programming languages, JavaScript uses a prototype chain to achieve inheritance.</p><br>
+    <p>Objects and Prototypes:<br>
+
+        Every object in JavaScript has a prototype, which is another object from which it inherits properties.
+        The prototype is accessed through the __proto__ property or, in modern JavaScript, using the Object.getPrototypeOf() method.
+        Constructor Functions:
+        
+        Constructor functions are used to create objects with a shared prototype.
+        When a new object is created using a constructor function with the new keyword, the prototype of the new object is set to the prototype property of the constructor function.<br>
+         <br>
+       <p>
+        <img src="images/prototype.png" alt="hoist">
+</body>
+</html>

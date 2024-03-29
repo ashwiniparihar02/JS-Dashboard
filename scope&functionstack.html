@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            margin-top: 30px;
+            color: black;
+        }
+        P{
+            margin-top: 30px;
+            color: black;
+            text-align: left;
+            font-weight: bold;
+        }
+        img{
+            margin-top: 30px;
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            margin-left: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1> Scope and Function Stack</h1>
+    <p>RECURSION</p><br>
+    <p>Recursion is a programming concept where a function calls itself in order to solve a problem. In JavaScript, you can use recursion to solve problems that can be broken down into smaller, similar sub-problems. Here's a simple example of a recursive function to calculate the factorial of a number:<br>
+    <br><br>
+       <img src="images/recursion.png" alt="hoist"><br><br>
+
+        <P>Lexical Scope:<br><br>
+
+            Lexical scope refers to how variable names are resolved in nested functions based on the physical structure of the code.
+            Variables are scoped based on where they are declared in the source code, and their visibility is determined by their location in the code.
+            In a lexically scoped language like JavaScript, inner functions can access variables from their outer functions, creating a chain of scopes.
+        </P>
+            <img src="images/lexical.png" alt=""><br><br>
+            <p>Closures:<br><br>
+
+                A closure is created when a function is defined within another function, and the inner function retains access to the outer function's variables even after the outer function has finished executing.
+                Closures allow functions to "remember" the scope in which they were created, preserving the state of variables.
+                Closures are a natural outcome of lexical scope when functions are returned from other functions or passed as arguments.
+            </p>
+            <img src="images/clousers.png" alt="">
+
+</body>
+</html>

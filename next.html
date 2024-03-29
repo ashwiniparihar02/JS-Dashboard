@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="next.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="nav">
+        <img src="images/javascript-icon-png-24.jpg" class="logo">
+        <p>Dashboard <i class="ri-dashboard-line"></i></p>
+    </div>
+    <h1 id="heading">JAVASCRIPT</h1>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="topics" onclick="showContent('Introduction')">Introduction of Javascript</div>
+            <div class="topics" onclick="showContent('history')">History of JavaScript</div>
+            <div class="topics" onclick="showContent('versions')">Versions of JavaScript</div>
+            <div class="topics" onclick="showContent('variables')">Variables in JavaScript</div>
+            <div class="topics" onclick="showContent('let')">let in JavaScript</div>
+            <div class="topics" onclick="showContent('const')">const in JavaScript</div>
+            <div class="topics" onclick="showContent('hoist')">Hoisting in JavaScript</div>
+            <div class="topics" onclick="showContent('scope')">Scope in Javascript</div>
+            <div class="topics" onclick="showContent('datatypes')">Datatypes in Javascript</div>
+            <div class="topics" onclick="showContent('object')">Objects in Javascript</div>
+            <div class="topics" onclick="showContent('typeof')">typeof operator in Javascript</div>
+            <div class="topics" onclick="showContent('typeconversion')">type conversion and coersion</div>
+
+
+
+
+            <div class="topics" onclick="showContent('prototyape')">Prototypal Inheritance</div>
+            <div class="topics" onclick="showContent('objectprototype')">Object Prototype</div>
+            <div class="topics" onclick="showContent('keyed-collection')">Keyed Collection</div>
+            <div class="topics" onclick="showContent('IIFE')">IIFE</div>
+            <div class="topics" onclick="showContent('scope&functionstack')">Scope and Function Stack</div>
+            <div class="topics" onclick="showContent('argument-object')">Argument Objects</div>
+            <div class="topics" onclick="showContent('bitwise')">Bitwise Operator</div>
+            <div class="topics" onclick="showContent('borrowing')">Function Borrowing</div>
+            <div class="topics" onclick="showContent('this')">This</div>
+            <div class="topics" onclick="showContent('callback')">Callbacks</div>
+            <div class="topics" onclick="showContent('promise')">Promises</div>
+            <div class="topics" onclick="showContent('async')">async-await</div>
+            <div class="topics" onclick="showContent('api')">APIs</div>
+            <div class="topics" onclick="showContent('commonjs')">common js</div>
+            <div class="topics" onclick="showContent('iterators')">iterators in js</div>
+            <div class="topics" onclick="showContent('genrator')">Generators in js</div>
+        </div>
+        <div>
+
+            <div class="content" id="content">
+                <div id="topic1">
+                    <h1>JAVASCRIPT</h1><br>
+                    <img src="images/learn-javascript.jpg" alt="js" class="images">
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        function showContent(topic) {
+            // Define the path or URL of the HTML documents
+            let path = '';
+
+            switch (topic) {
+                case 'Introduction':
+                    path = 'Introduction.html';
+                    break;
+                case 'history':
+                    path = 'history.html';
+                    break;
+                case 'versions':
+                    path = 'versions.html';
+                    break;
+                case 'variables':
+                    path = 'variables.html';
+                    break;
+                case 'let':
+                    path = 'let.html';
+                    break;
+                case 'const':
+                    path = 'const.html';
+                    break;
+                case 'hoist':
+                    path = 'hoisting.html';
+                    break;
+                case 'scope':
+                    path = 'scope.html';
+                    break;
+                case 'datatypes':
+                    path = 'datatypes.html';
+                    break;
+                case 'object':
+                    path = 'objects.html';
+                    break;
+                case 'typeof':
+                    path = 'typeof.html';
+                    break;
+                case 'typeconversion':
+                    path = 'typeconversionandcoersion.html';
+                    break;
+
+
+
+
+
+
+                case 'prototyape':
+                    path = 'prototype.html';
+                    break;
+                case 'objectprototype':
+                    path = 'object-prototype.html';
+                    break;
+                case 'keyed-collection':
+                    path = 'keyedcollection.html';
+                    break;
+                case 'IIFE':
+                    path = 'IIFE.html';
+                    break;
+                case 'scope&functionstack':
+                    path = 'scope&functionstack.html';
+                    break;
+                case 'argument-object':
+                    path = 'argument-object.html';
+                    break;
+                case 'bitwise':
+                    path = 'bitwise.html';
+                    break;
+                case 'borrowing':
+                    path = 'function-borrowing.html';
+                    break;
+                case 'this':
+                    path = 'this.html';
+                    break;
+                case 'callback':
+                    path = 'callback.html';
+                    break;
+                case 'promise':
+                    path = 'promise.html';
+                    break;
+                case 'async':
+                    path = 'async.html';
+                    break;
+                case 'api':
+                    path = 'api.html';
+                    break;
+                case 'commonjs':
+                    path = 'common.html';
+                    break;
+                case 'iterators':
+                    path = 'iterators.html';
+                    break;
+                    case 'genrator':
+                    path = 'generator.html';
+                    break;
+                // Add more cases for additional topics
+
+                default:
+                    console.error('Invalid topic');
+                    return;
+            }
+
+            // Use fetch to get the HTML content
+            fetch(path)
+                .then(response => response.text())
+                .then(html => {
+                    // Display the HTML content in the content div
+                    document.getElementById('content').innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        }
+    </script>
+</body>
+
+</html>

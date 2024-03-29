@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+
+        .content {
+            flex: 3;
+            padding: 20px;
+        }
+
+        .topics {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <!-- List of topics -->
+        <div class="topics" onclick="showContent('Topic 1')">Topic 1</div>
+        <div class="topics" onclick="showContent('Topic 2')">Topic 2</div>
+        <div class="topics" onclick="showContent('Topic 3')">Topic 3</div>
+        <!-- Add more topics as needed -->
+    </div>
+    <div class="content" id="content">
+        <!-- Content will be displayed here -->
+        <div class="content" id="content">
+            <div id="topic1">    
+                 <h1>What is JavaScript?</h1><br>
+                 <br>
+                <pre>
+                 JavaScript (JS) is the top programming language for web development, 
+                 used for both Client-Side and Server-Side purposes. 
+                 It’s is also known as a scripting language for web pages.
+                 It is commonly used to create dynamic and interactive content on websites. 
+                 JS plays a crucial role in modern web browsers, enabling client-side scripting to modify web page content in real-time, enhancing user experience.
+                </pre>
+                <img src="images/Screenshot (54).png" alt="js" class="images">
+             </div>
+             
+         </div>
+    </div>
+</div>
+
+<script>
+    function showContent(topic) {
+        // Define the path or URL of the HTML documents
+        let path = '';
+
+        switch (topic) {
+            case 'Topic 1':
+                path = 'topic1.html';
+                break;
+            case 'Topic 2':
+                path = 'topic2.html';
+                break;
+            case 'Topic 3':
+                path = 'topic3.html';
+                break;
+            // Add more cases for additional topics
+
+            default:
+                console.error('Invalid topic');
+                return;
+        }
+
+        // Use fetch to get the HTML content
+        fetch(path)
+            .then(response => response.text())
+            .then(html => {
+                // Display the HTML content in the content div
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching content:', error));
+    }
+</script>
+
+</body>
+</html>

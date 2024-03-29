@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            margin-top: 30px;
+            color: black;
+        }
+        P{
+            margin-top: 30px;
+            color: black;
+            text-align: left;
+            font-weight: bold;
+        }
+        img{
+            margin-top: 30px;
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            margin-left: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1> KEYED COLLECTION</h1>
+    <p>In JavaScript, a "keyed collection" typically refers to data structures that allow you to store and retrieve values using keys. There are several built-in keyed collections in JavaScript, and two of the most commonly used ones are:</p><br>
+    <p>Map:<br>
+        Key Types:<br>
+        
+        Map allows any data type, including objects and primitives, as keys.
+        Memory Management:<br>
+        
+        Memory management is not tied to the map entries. Even if the keys are objects, the map entries won't prevent those objects from being garbage collected.
+        Iteration:<br>
+        
+        Iterating over a Map is straightforward, and you can easily loop through key-value pairs using methods like forEach.<br>
+
+        <br>
+         <br>
+       <p>
+        <img src="images/map.png" alt="hoist">
+        <p>
+            WeakMap:<br>
+Key Types:<br>
+
+WeakMap only allows objects as keys. Primitives, like strings or numbers, are not allowed.
+Memory Management:<br>
+
+Unlike Map, the entries in a WeakMap do not prevent the garbage collection of keys. If the only reference to a key is within the WeakMap, both the key and its associated value can be garbage collected.
+Iteration:<br>
+
+WeakMap does not have methods for directly iterating over its keys or values. Iteration is not supported due to the potential lack of references to keys.
+Use Cases:<br>
+
+WeakMap is useful when you want to associate additional data with an object without preventing that object from being garbage collected.
+        </p>
+        <img src="images/weak map.png" alt=""><br><br>
+
+        <p>
+            Set:<br>
+            Values:<br>
+            
+            A Set is a collection of unique values, and it can store any data type, including primitive values and objects.
+            Memory Management:<br>
+            
+            The values stored in a Set are not tied to the set itself. If a value is stored in a set and becomes unreachable, it won't prevent the garbage collection of that value.
+            Iteration:<br>
+            
+            You can easily iterate over the elements of a Set, and it maintains the order of insertion.<br>
+        </p> <br>
+        <img src="images/set.png" alt="">
+        
+</body>
+</html>
